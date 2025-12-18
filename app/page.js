@@ -1,5 +1,5 @@
-"use client";
 export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <main
@@ -13,58 +13,53 @@ export default function Home() {
         background: "#ffffff",
       }}
     >
-      <div style={{ maxWidth: 640, width: "100%" }}>
-        <h1 style={{ fontSize: 48, marginBottom: 16 }}>
+      <div style={{ maxWidth: 720, width: "100%" }}>
+        <div style={{ fontSize: 14, color: "#666", marginBottom: 12 }}>
+          Stealth mode · Private alpha
+        </div>
+
+        <h1 style={{ fontSize: 52, marginBottom: 14, letterSpacing: -1 }}>
           Parlee
         </h1>
 
-        <p style={{ fontSize: 20, marginBottom: 24, lineHeight: 1.5 }}>
-          A daily video companion for founders building in public on LinkedIn.
+        <p style={{ fontSize: 20, marginBottom: 18, lineHeight: 1.5 }}>
+          A daily language ritual for adults who understand the language — but
+          don’t speak fluently yet.
         </p>
 
-        <p style={{ fontSize: 16, marginBottom: 24, color: "#444" }}>
-          We’re building a simple system that helps you stay consistent:
-          one focused prompt per day, a short video reply, and continuity over weeks.
+        <p style={{ fontSize: 16, marginBottom: 18, color: "#444", lineHeight: 1.6 }}>
+          Every day you get a zero-thinking plan:
+          <br />
+          <b>Story of the Day</b> (write about your life → AI rewrites naturally → saves vocab),
+          <br />
+          <b>Shadowing</b> (ready-to-repeat clips based on your interests — no searching).
         </p>
 
-        <p
+        <ul style={{ margin: "0 0 24px 18px", color: "#444", lineHeight: 1.8 }}>
+          <li>15 minutes/day</li>
+          <li>Personal vocabulary from your real life</li>
+          <li>Consistency without planning or prep</li>
+        </ul>
+
+        <a
+          href="mailto:hello@parlee.app?subject=Parlee%20alpha%20access&body=Hi!%20I%27d%20love%20to%20request%20alpha%20access.%0A%0AName:%0ALanguage:%0ALevel:%0A"
           style={{
-            fontSize: 14,
-            marginBottom: 32,
-            color: "#666",
-          }}
-        >
-          🚧 Stealth mode · Private alpha
-        </p>
-
-        <button
-          style={{
-            padding: "12px 20px",
-            fontSize: 16,
-            borderRadius: 6,
-            border: "1px solid #000",
+            display: "inline-block",
+            padding: "14px 18px",
+            borderRadius: 10,
             background: "#000",
             color: "#fff",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            window.location.href = "mailto:hello@parlee.app?subject=Parlee early access";
+            textDecoration: "none",
+            fontWeight: 600,
           }}
         >
           Request access
-        </button>
+        </a>
 
-        <p
-          style={{
-            fontSize: 12,
-            marginTop: 24,
-            color: "#777",
-          }}
-        >
-          Not publicly available yet. Built with a small group of B2B founders.
-        </p>
+        <div style={{ marginTop: 14, fontSize: 13, color: "#777" }}>
+          Private alpha. Early access is invite-only.
+        </div>
       </div>
     </main>
   );
 }
-
